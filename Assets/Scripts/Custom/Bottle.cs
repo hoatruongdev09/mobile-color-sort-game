@@ -16,14 +16,6 @@ public class Bottle : MonoBehaviour {
     [SerializeField] private RectTransform colorHolder;
     [SerializeField] private Image prefabImageColor;
 
-    // private void Update () {
-    //     if (Input.GetKeyUp (KeyCode.A)) {
-    //         PourIn (new BottleColor { Color = new Color32 (255, 255, 255, 255), Count = 1 });
-    //     }
-    //     if (Input.GetKeyUp (KeyCode.R)) {
-    //         PourOut ();
-    //     }
-    // }
     public void SetInitColor (List<BottleColor> colors) {
         Colors = colors;
         foreach (var color in Colors) {
@@ -71,7 +63,9 @@ public class Bottle : MonoBehaviour {
         return ColorUtility.ToHtmlStringRGB (color1) == ColorUtility.ToHtmlStringRGB (color2);
     }
     private LTDescr AnimateAddColor (Image imgColor, int number, float time = .3f) {
-        var nextSize = imgColor.rectTransform.localScale + new Vector3 (0, number);
+        LeanTween.cancel (imgColor.gameObject);
+        var currentHeight = Mathf.Ceil (imgColor.rectTransform.transform.localScale.y);
+        var nextSize = new Vector3 (imgColor.rectTransform.localScale.x, currentHeight + number);
         return imgColor.rectTransform.LeanScale (nextSize, time);
     }
     private LTDescr AnimateRemoveColor (Image imgColor, float time = .3f) {

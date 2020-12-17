@@ -1,0 +1,60 @@
+﻿{
+    "bottles": [
+        {
+            "maxColor": 4,
+            "colors": [
+                {
+                    "hexColor": "21FF00FF",
+                    "count": 3
+                },
+                {
+                    "hexColor": "F81414FF",
+                    "count": 1
+                }
+            ]
+        },
+        {
+            "maxColor": 4,
+            "colors": [
+                {
+                    "hexColor": "F81414FF",
+                    "count": 3
+                },
+                {
+                    "hexColor": "00FDFFFF",
+                    "count": 1
+                }
+            ]
+        },
+        {
+            "maxColor": 4,
+            "colors": [
+                {
+                    "hexColor": "00FDFFFF",
+                    "count": 3
+                },
+                {
+                    "hexColor": "FF0083FF",
+                    "count": 1
+                }
+            ]
+        },
+        {
+            "maxColor": 4,
+            "colors": [
+                {
+                    "hexColor": "21FF00FF",
+                    "count": 1
+                },
+                {
+                    "hexColor": "FF0083FF",
+                    "count": 3
+                }
+            ]
+        },
+        {
+            "maxColor": 4,
+            "colors": []
+        }
+    ]
+}
